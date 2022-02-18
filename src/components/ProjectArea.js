@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap";
+import CatsGalore from "./CatsGalore";
 import CutieCats from "./CutieCats";
 
 function ProjectArea() {
