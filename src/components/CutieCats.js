@@ -1,19 +1,12 @@
-import { Card } from "react-bootstrap";
-import cutieCatImg from "../images/cutiecatsimg.png";
+import cutieCatImg from "../images/BodiCatAnimation.gif";
+import ProjectCard from "./ProjectCards";
 
 function CutieCats() {
 
-    return (
+    const img = cutieCatImg
+    const text = "cat"
 
-        <Card>
-            <Card.Img variant="top" src={cutieCatImg}  />
-            <Card.Body>
-                <Card.Text>
-                     cat
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    );
+    return <ProjectCard img={img} text={text}/>
 
 }
 

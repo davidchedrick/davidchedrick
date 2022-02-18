@@ -1,19 +1,13 @@
-import { Card } from "react-bootstrap";
-import catsGaloreImg from "../images/catsgaloreimg.png"
+import catsGaloreImg from "../images/CutieCatAnimation.gif"
+import ProjectCard from "./ProjectCards";
+
 function CatsGalore() {
 
-    return (
-        <Card>
-            <Card.Img variant="top" src={catsGaloreImg} />
-            <Card.Body>
-                <Card.Text>
-                     cat
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    );
+    const img = catsGaloreImg
+    const text = "cat"
+
+    return <ProjectCard img={img} text={text}/> 
 
 }
-
 
 export default CatsGalore;
