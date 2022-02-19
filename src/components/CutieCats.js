@@ -5,8 +5,11 @@ function CutieCats() {
 
     const img = cutieCatImg
     const text = "cat"
-
-    return <ProjectCard img={img} text={text}/>
+    const list = "Made with: HTML, CSS, JavaScript"
+    const link = "https://cutiecats.netlify.app/"
+    const title = "Cutie Cats"
+    
+    return <ProjectCard img={img} title={title} text={text} list={list} link={link} />
 
 }
 
