@@ -7,7 +7,7 @@ function Header() {
     return(
         
         <HeaderDiv>
-            David Chedrick's Portfolio 
+            David Chedrick's Portfolio. 
         </HeaderDiv>
     
     );
