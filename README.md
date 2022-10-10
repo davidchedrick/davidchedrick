@@ -10,3 +10,6 @@ I am a husband, father, and cat enthusiast.
 I have strong skills in management, training, coaching, and optimizing productivity. Dedicated to continuous growth, development, and engagement.
 
 Experienced in working with JavaScript, React, Ruby on Rails, Active Record, HTML, and CSS.  
+
+
+![react](https://user-images.githubusercontent.com/85001660/194919928-8b9537b1-c879-497a-b29c-c082d64d1865.svg)
