@@ -11,6 +11,5 @@ I have strong skills in management, training, coaching, and optimizing productiv
 
 Experienced in working with JavaScript, React, Ruby on Rails, Active Record, HTML, and CSS.  
 
-<img height="20"src="https://img.icons8.com/color/452/graphql.png">
-![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
-![react](https://user-images.githubusercontent.com/85001660/194919928-8b9537b1-c879-497a-b29c-c082d64d1865.svg?style=flat-square&logo=javascript)
+
+![react](https://user-images.githubusercontent.com/85001660/194919928-8b9537b1-c879-497a-b29c-c082d64d1865.svg?style=flat-square&logo=javascript =25x25)
