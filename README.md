@@ -12,4 +12,4 @@ I have strong skills in management, training, coaching, and optimizing productiv
 Experienced in working with JavaScript, React, Ruby on Rails, Active Record, HTML, and CSS.  
 
 
-![react](https://user-images.githubusercontent.com/85001660/194919928-8b9537b1-c879-497a-b29c-c082d64d1865.svg?style=flat-square&logo=javascript =25x25)
+<img align="left" alt="JavaScript" src="https://img.icons8.com/color/36/000000/javascript.png"/>
