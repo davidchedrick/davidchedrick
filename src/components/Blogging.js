@@ -1,26 +1,28 @@
 import ProjectCard from "./ProjectCards";
 
-function CutieCats() {
-	const img = cutieCatImg;
+function Blogging() {
+	const img = "";
 	const text =
-		"Cutie Cats is a React single page application. Using client-side routing, with React-Router. The application has full CRUD capabilities. Front-end is hosted on Netlify and with the Back-end hosted on Heroku.";
+		"BodhiCat Blogging is a web application built on the client side with React. It is styled with Bootstrap and React-Bootstrap. The server side is Ruby on Rails with Active Record. With PostgreSQL as the database.";
 	const link = "";
-	// const link = "https://cutiecats.netlify.app/"
-	const title = "Cutie Cats";
+
+	const title = "BodhiCat's Blogging";
 	const list = (
 		<div>
 			<ul>
+				<li>JavaScript</li>
 				<li>React</li>
 				<li>CSS</li>
 				<li>Bootstrap</li>
-				<li>Styled-Components</li>
 				<li>React-Router</li>
-				<li>uuid</li>
+				<li>Ruby</li>
+				<li>Active Record</li>
+				<li>PostgreSQL</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="https://github.com/davidchedrick/phase2frontend/tree/main/phase-2-frontend">
-						GitHub
+					<a href="https://github.com/davidchedrick/phase-4-project">
+						GitHub Client
 					</a>
 				</li>
 			</ul>
@@ -38,4 +40,4 @@ function CutieCats() {
 	);
 }
 
-export default CutieCats;
+export default Blogging;

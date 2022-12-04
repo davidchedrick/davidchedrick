@@ -11,6 +11,7 @@ function CutieCats() {
 	const list = (
 		<div>
 			<ul>
+				<li>JavaScript</li>
 				<li>React</li>
 				<li>CSS</li>
 				<li>Bootstrap</li>
