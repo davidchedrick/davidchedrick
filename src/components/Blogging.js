@@ -21,8 +21,8 @@ function Blogging() {
 			</ul>
 			<ul>
 				<li>
-					<a href="https://github.com/davidchedrick/phase-4-project">
-						GitHub Client
+					<a href="https://github.com/davidchedrick/phase-5-project">
+						GitHub
 					</a>
 				</li>
 			</ul>

@@ -1,13 +1,16 @@
 import { Container, Row } from "react-bootstrap";
 import ChoreList from "./ ChoreList";
 import Blogging from "./Blogging";
+import BodhiSpot from "./BodhiSpot";
 import CatsGalore from "./CatsGalore";
 import CutieCats from "./CutieCats";
 
 function ProjectArea() {
 	return (
 		<Container>
-			<Row>{/* <CutieCats /> */}</Row>
+			<Row>
+				<BodhiSpot />
+			</Row>
 			<Row>
 				<Blogging />
 			</Row>
