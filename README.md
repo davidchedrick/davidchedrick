@@ -1,70 +1,30 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![austin-ty](https://user-images.githubusercontent.com/85001660/194916129-2915652f-f316-4131-93d4-e0744ecc6856.jpg)
 
-## Available Scripts
+# Hello! I'm David Chedrick from Austin Texas, nice to meet you!
 
-In the project directory, you can run:
+I am a Full Stack Developer with a diverse professional background in web development, business management, retail, labor, and music performance. 
 
-### `npm start`
+I am a husband, father, and cat enthusiast. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I have strong skills in management, training, coaching, and optimizing productivity. Dedicated to continuous growth, development, and engagement.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Experienced in working with JavaScript, React, Ruby on Rails, Active Record, HTML, and CSS.  
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img align="left" alt="JavaScript" src="https://img.icons8.com/color/36/000000/javascript.png"/>
+<img align="left" alt="HTML5" src="https://img.icons8.com/color/36/000000/html-5.png"/>
+<img align="left" alt="CSS3" src="https://img.icons8.com/color/36/000000/css3.png"/>
+<img align="left" alt="React" src="https://img.icons8.com/plasticine/36/000000/react.png"/>
+<img align="left" alt="Node" src="https://img.icons8.com/color/36/000000/nodejs.png"/>
+<img align="left" alt="Git" src="https://img.icons8.com/color/36/000000/git.png"/>
+<img align="left" alt="PostgreSQL" src="https://img.icons8.com/color/36/000000/postgreesql.png"/>
+<img align="left" alt="GitHub" src="https://img.icons8.com/fluent/36/000000/github.png"/>
+<img align="left" alt="SQL" src="https://img.icons8.com/wired/36/000000/sql.png"/>
+<img align="left" alt="Visual Studio Code" src="https://img.icons8.com/fluent/36/000000/visual-studio-code-2019.png"/>
+<img align="left" alt="bootstrap" src="https://img.icons8.com/color/36/000000/bootstrap.png"/>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
