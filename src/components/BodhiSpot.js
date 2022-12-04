@@ -1,13 +1,12 @@
-import cutieCatImg from "../images/BodiCatAnimation.gif";
 import ProjectCard from "./ProjectCards";
 
 function CutieCats() {
 	const img = cutieCatImg;
 	const text =
-		"BodhiCat's Cutie Cats is a React single page application. Using client-side routing, with React-Router. The application has full CRUD capabilities. Front-end is hosted on Netlify and with the Back-end hosted on Heroku.";
+		"Cutie Cats is a React single page application. Using client-side routing, with React-Router. The application has full CRUD capabilities. Front-end is hosted on Netlify and with the Back-end hosted on Heroku.";
 	const link = "";
 	// const link = "https://cutiecats.netlify.app/"
-	const title = "BodhiCat's Cutie Cats";
+	const title = "Cutie Cats";
 	const list = (
 		<div>
 			<ul>
