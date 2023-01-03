@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { Toggle } from "./Toggle";
 
 function Header({ setIsActive }) {
-	function handleToggle() {
-		setIsActive(current => !current);
-	}
+	// function handleToggle() {
+	// 	setIsActive(current => !current);
+	// }
 
 	return (
 		<HeaderDiv>
 			<span>David Chedrick.</span>
-			<ToggleStyle>
+			{/* <ToggleStyle>
 				<label className="switch">
 					<input
 						type="checkbox"
@@ -16,7 +17,8 @@ function Header({ setIsActive }) {
 					/>
 					<span className="slider"></span>
 				</label>
-			</ToggleStyle>
+			</ToggleStyle> */}
+			<Toggle />
 		</HeaderDiv>
 	);
 }

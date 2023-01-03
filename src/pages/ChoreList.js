@@ -1,5 +1,6 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import bodhiChoresImg from "../images/bodhiChores.gif";
+
 function ChoreList() {
 	const img = bodhiChoresImg;
 	const text =

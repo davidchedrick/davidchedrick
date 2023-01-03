@@ -1,5 +1,5 @@
 import cutieCatImg from "../images/BodiCatAnimation.gif";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 
 function CutieCats() {
 	const img = cutieCatImg;

@@ -1,0 +1,68 @@
+html {
+    --pink: #ff00d4;
+    --black: #000000;
+    --blue: #0000ff;
+    --maxWidth: 1000px;
+    --bs: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--pink);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--pink);
+}
+
+
+
+
+
+  .theme-dark {
+    --dark-text: #292929;
+    --light-text: #F9F8F8;  
+    --dark-background: #2F4550;
+    --light-background: #586F7C;
+    --accent: #B8DBD9;
+    --button-border: #B8DBD9;
+  }
+  .theme-light {
+    --dark-text: #5E4B56;
+    --light-text: #5E4B56;
+    --dark-background: #DBE7E4;
+    --light-background: #EDDCD2;
+    --accent: #DBE7E4;
+    --button-border: #5E4B56;
+  }
+  html, #root {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
+  
+  nav {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+  }
+  
+  .main-container {
+    background-color: var(--light-background);
+  }
