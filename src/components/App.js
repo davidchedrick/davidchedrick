@@ -1,6 +1,6 @@
 import Header from "./Header";
 import ProjectArea from "./ProjectArea";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 import "bootstrap/dist/css/bootstrap.css";
 

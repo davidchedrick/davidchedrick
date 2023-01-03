@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import bodhiSpotImg from "../images/bodhiSpot.gif";
+import gitImg from "../images/github-mark-white.png";
 
 function BodhiSpot() {
 	const img = bodhiSpotImg;
