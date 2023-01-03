@@ -4,7 +4,7 @@ import { Toggle } from "./Toggle";
 function Header() {
 	return (
 		<HeaderDiv>
-			<span>David Chedrick.</span>
+			<span className="title">David Chedrick.</span>
 
 			<Toggle />
 		</HeaderDiv>

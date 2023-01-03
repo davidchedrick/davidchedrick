@@ -73,3 +73,45 @@ li a:hover {
   /* .main-container {
     background-color: var(--light-background);
   } */
+
+  .title {
+    background: linear-gradient(
+        -66deg,
+        #f10c0c,
+        #133eff,
+        #990099,
+        #06a36f,
+        #1c8aca,
+        #022ff8,
+        #d130d1,
+        #5eff00
+      );
+      background-size: 400%;
+      font-family: monospace;
+      font-weight: bolder;
+      font-size: 1.2em;
+      letter-spacing: -6px;
+      
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glimmer 6s ease-in-out infinite;
+      -moz-animation: glimmer 6s ease-in-out infinite;
+      -webkit-animation: glimmer 6s ease-in-out infinite;
+  }
+  @keyframes glimmer {
+    0% {
+      background-position: 0px 50%;
+    }
+    25% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
+  }
