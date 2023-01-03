@@ -1,7 +1,8 @@
-import ProjectCard from "./ProjectCards";
+import ProjectCard from "./ProjectCard";
+import bodhiSpotImg from "../images/bodhiSpot.gif";
 
 function BodhiSpot() {
-	const img = "";
+	const img = bodhiSpotImg;
 	const text =
 		"BodhiSpot is a web application built on the client side with React. It is styled with Bootstrap and React-Bootstrap. The server side is Ruby on Rails with Active Record. With PostgreSQL as the database.";
 	const link = "";

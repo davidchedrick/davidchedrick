@@ -1,9 +1,10 @@
-import ProjectCard from "./ProjectCards";
+import ProjectCard from "./ProjectCard";
+import bodhiBloggingImg from "../images/bodhiBlogging.gif";
 
 function Blogging() {
-	const img = "";
+	const img = bodhiBloggingImg;
 	const text =
-		"BodhiCat Blogging is a web application built on the client side with React. It is styled with Bootstrap and React-Bootstrap. The server side is Ruby on Rails with Active Record. With PostgreSQL as the database.";
+		"BodhiCat Blogging is an extension of the web application BodiSpot. It is built on the client side with React. It is styled with Bootstrap and React-Bootstrap. The server side is Ruby on Rails with Active Record. With PostgreSQL as the database.";
 	const link = "";
 
 	const title = "BodhiCat's Blogging";

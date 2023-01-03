@@ -1,7 +1,7 @@
-import ProjectCard from "./ProjectCards";
-
+import ProjectCard from "./ProjectCard";
+import bodhiChoresImg from "../images/bodhiChores.gif";
 function ChoreList() {
-	const img = "";
+	const img = bodhiChoresImg;
 	const text =
 		"BodhiCat's Chore List is a web application built on the client side with React. It is styled with Bootstrap, React-Bootstrap, and Styled-Components. The server side is with Ruby, Sinatra, Active Record, and SQLite.";
 	const link = "";
