@@ -20,7 +20,7 @@ function Blogging() {
 				<li>Active Record</li>
 				<li>PostgreSQL</li>
 			</ul>
-			<ul>
+			<ul className="git-links">
 				<li>
 					<a href="https://github.com/davidchedrick/phase-5-project">
 						GitHub

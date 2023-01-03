@@ -15,7 +15,7 @@ function CatsGalore() {
 				<li>CSS</li>
 				<li>JavaScript</li>
 			</ul>
-			<ul>
+			<ul className="git-links">
 				<li>
 					<a href="https://github.com/davidchedrick/phase_1_project">
 						GitHub

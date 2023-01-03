@@ -20,7 +20,7 @@ function BodhiSpot() {
 				<li>Active Record</li>
 				<li>PostgreSQL</li>
 			</ul>
-			<ul>
+			<ul className="git-links">
 				<li>
 					<a href="https://github.com/davidchedrick/phase2frontend/tree/main/phase-2-frontend">
 						GitHub

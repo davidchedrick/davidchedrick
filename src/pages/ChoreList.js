@@ -21,7 +21,7 @@ function ChoreList() {
 				<li>Sinatra</li>
 				<li>SQLite</li>
 			</ul>
-			<ul>
+			<ul className="git-links">
 				<li>
 					<a href="https://github.com/davidchedrick/phase-3-client">
 						GitHub Client

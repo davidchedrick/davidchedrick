@@ -22,6 +22,7 @@ const HeaderDiv = styled.div`
 	justify-content: space-between;
 	margin: 20px;
 	font-size: 50px;
+	color: #da1598;
 `;
 
 export default Header;
