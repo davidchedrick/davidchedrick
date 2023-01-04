@@ -1,3 +1,5 @@
+import { BrowserRouter as Route, Switch } from "react-router-dom";
+
 import Header from "./Header";
 import ProjectArea from "./ProjectArea";
 import { useState } from "react";
@@ -17,7 +19,11 @@ function App() {
 	return (
 		<div className="App">
 			<Header setIsActive={setIsActive} />
-			<ProjectArea />
+			<Switch>
+				<Route path="/">
+					<ProjectArea />
+				</Route>
+			</Switch>
 		</div>
 	);
 }

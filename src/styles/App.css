@@ -81,17 +81,32 @@ li a:hover {
         #133eff,
         #990099,
         #06a36f,
-        #1c8aca,
+        #501cca,
         #022ff8,
         #d130d1,
-        #5eff00
+        #5eff00,
+        #f10c0c,
+        #ff9913,
+        #e6f702,
+        #06a36f,
+        #0628e7,
+        #c702f8,
+        #f112ba,
+        #c70d0d,
+        #d67e0b,
+        #ecf842,
+        #17d155,
+        #1e1bf0,
+        #c218ec,
+        #c42574
       );
-      background-size: 400%;
+      background-size: 600%;
       font-family: monospace;
       font-weight: bolder;
       font-size: 1.2em;
       letter-spacing: -6px;
       
+      background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: glimmer 6s ease-in-out infinite;
