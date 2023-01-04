@@ -1,13 +1,23 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Toggle } from "./Toggle";
+import Nav from "./Nav";
+import { Toggle } from "./toggle/Toggle";
 
 function Header() {
 	return (
-		<HeaderDiv>
-			<span className="title">David Chedrick.</span>
+		<>
+			<HeaderDiv>
+				<NavLink
+					exact
+					to="/"
+				>
+					<span className="title">David Chedrick.</span>
+				</NavLink>
 
-			<Toggle />
-		</HeaderDiv>
+				<Toggle />
+			</HeaderDiv>
+			<Nav />
+		</>
 	);
 }
 
@@ -15,7 +25,7 @@ const HeaderDiv = styled.div`
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	text-align: center;
-	text-decoration: underline;
+	text-decoration: none;
 	display: flex;
 	flex-direction: row;
 	padding: 20px;

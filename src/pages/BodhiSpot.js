@@ -1,4 +1,4 @@
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/project/ProjectCard";
 import bodhiSpotImg from "../images/bodhiSpot.gif";
 
 function BodhiSpot() {

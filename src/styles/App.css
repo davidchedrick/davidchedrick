@@ -64,7 +64,7 @@ li a:hover {
     --button-border: #5E4B56;
   }
   
-  
+
   /* nav {
     background-color: var(--dark-background);
     color: var(--light-text);
@@ -105,7 +105,7 @@ li a:hover {
       font-weight: bolder;
       font-size: 1.2em;
       letter-spacing: -6px;
-      
+
       background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

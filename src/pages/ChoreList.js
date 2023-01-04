@@ -1,4 +1,4 @@
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/project/ProjectCard";
 import bodhiChoresImg from "../images/bodhiChores.gif";
 
 function ChoreList() {
