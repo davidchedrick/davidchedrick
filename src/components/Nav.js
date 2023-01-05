@@ -21,13 +21,13 @@ export default function Nav() {
 				to="/about"
 			>
 				Games
-			</NavLink>
+			</NavLink>*/}
 			<NavLink
 				exact
-				to="/about"
+				to="/contact"
 			>
 				Contact
-			</NavLink> */}
+			</NavLink>
 			<button
 				className="invisable-button"
 				disabled
@@ -53,10 +53,12 @@ const NavStyles = styled.ul`
 		position: relative;
 		text-transform: uppercase;
 		font-weight: 800;
-		font-size: 1em;
+		font-size: 1.2em;
 		background: none;
 		border: 0 0;
 		text-decoration: none;
+		color: var(--blue);
+		-webkit-text-stroke: 0.8px white;
 
 		/* @media (max-width: 700px) {
 			font-size: 10px;
