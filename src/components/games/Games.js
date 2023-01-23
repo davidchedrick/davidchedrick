@@ -1,6 +1,6 @@
 import { Button, Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import connectGif from "../../images/connectGame.gif";
 import "./Games.css";
 
 function Games() {
@@ -9,7 +9,7 @@ function Games() {
 			<Card style={{ width: "18rem" }}>
 				<Card.Img
 					variant="top"
-					src="holder.js/100px180"
+					src={connectGif}
 				/>
 				<Card.Body>
 					<Card.Title>Connect Game</Card.Title>
