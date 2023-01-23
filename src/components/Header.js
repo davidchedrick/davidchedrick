@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Nav from "./Nav";
 import { Toggle } from "./toggle/Toggle";
@@ -7,12 +7,9 @@ function Header() {
 	return (
 		<>
 			<HeaderDiv>
-				<NavLink
-					exact
-					to="/"
-				>
+				<Link to="/">
 					<span className="title">David Chedrick.</span>
-				</NavLink>
+				</Link>
 
 				<Toggle />
 			</HeaderDiv>

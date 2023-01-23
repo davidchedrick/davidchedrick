@@ -32,7 +32,6 @@ export function Toggle() {
 					id="toggle"
 					className="toggle--checkbox"
 					onClick={handleOnClick}
-					checked
 				/>
 			) : (
 				<input

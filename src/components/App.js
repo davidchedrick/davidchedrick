@@ -1,4 +1,4 @@
-import { BrowserRouter as Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Header from "./Header";
 import ProjectArea from "./project/ProjectArea";
@@ -9,6 +9,8 @@ import { keepTheme } from "./toggle/themes";
 import { useEffect } from "react";
 import About from "./about/About";
 import Contact from "./contact/Contact";
+import Games from "./games/Games";
+import ConnectGame from "./games/connect/ConnectGame";
 
 function App() {
 	const [isActive, setIsActive] = useState(false);
@@ -22,29 +24,41 @@ function App() {
 		<div className="App">
 			<Header setIsActive={setIsActive} />
 
-			<Switch>
+			<Routes>
 				<Route
-					exact
+					path="/"
+					element={<ProjectArea />}
+				/>
+
+				<Route
+					path="/"
+					element={<ProjectArea />}
+				/>
+				<Route
 					path="/about"
-				>
-					<About />
-				</Route>
+					element={<About />}
+				/>
 
 				<Route
-					exact
 					path="/contact"
-				>
-					<Contact />
-				</Route>
+					element={<Contact />}
+				/>
 
-				<Route path="/">
-					<ProjectArea />
-				</Route>
+				<Route
+					path="/games"
+					element={<Games />}
+				/>
 
-				<Route path="*">
-					<h1>404 not found</h1>
-				</Route>
-			</Switch>
+				<Route
+					path="/connect-game"
+					element={<ConnectGame />}
+				/>
+
+				<Route
+					path="*"
+					element={<h1>404 not found</h1>}
+				/>
+			</Routes>
 		</div>
 	);
 }

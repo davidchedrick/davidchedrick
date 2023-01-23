@@ -1,33 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Nav() {
 	return (
 		<NavStyles>
-			<NavLink
-				exact
-				to="/about"
-			>
-				About
-			</NavLink>
-			<NavLink
-				exact
-				to="/"
-			>
-				Projects
-			</NavLink>
-			{/* <NavLink
-				exact
-				to="/about"
-			>
-				Games
-			</NavLink>*/}
-			<NavLink
-				exact
-				to="/contact"
-			>
-				Contact
-			</NavLink>
+			<Link to="about">About</Link>
+			<Link to="/">Projects</Link>
+			<Link to="games">Games</Link>
+			<Link to="contact">Contact</Link>
 			<button
 				className="invisable-button"
 				disabled
@@ -58,7 +38,7 @@ const NavStyles = styled.ul`
 		border: 0 0;
 		text-decoration: none;
 		color: var(--blue);
-		-webkit-text-stroke: 0.8px white;
+		-webkit-text-stroke: 0.5px white;
 
 		/* @media (max-width: 700px) {
 			font-size: 10px;
