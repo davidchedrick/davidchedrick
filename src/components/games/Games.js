@@ -5,8 +5,11 @@ import "./Games.css";
 
 function Games() {
 	return (
-		<Container className="games-container">
-			<Card style={{ width: "18rem" }}>
+		<div className="games-container">
+			<Card
+				style={{ width: "20rem" }}
+				className="game-card"
+			>
 				<Card.Img
 					variant="top"
 					src={connectGif}
@@ -15,12 +18,15 @@ function Games() {
 					<Card.Title>Connect Game</Card.Title>
 					<Card.Text>Connect dots in a row....</Card.Text>
 
-					<Link to="/connect-game">
-						<Button variant="primary">Play</Button>
+					<Link
+						to="/connect-game"
+						className="link-button"
+					>
+						<button>PLAY</button>
 					</Link>
 				</Card.Body>
 			</Card>
-		</Container>
+		</div>
 	);
 }
 
