@@ -10,7 +10,6 @@ function Header() {
 				<Link to="/">
 					<span className="title">David Chedrick.</span>
 				</Link>
-
 				<Toggle />
 			</HeaderDiv>
 			<Nav />
@@ -30,6 +29,12 @@ const HeaderDiv = styled.div`
 	margin: 20px;
 	font-size: 50px;
 	color: #da1598;
+	@media (max-width: 700px) {
+		display: flex;
+		flex-direction: column-reverse;
+		font-size: 3em;
+		padding: 10px;
+	}
 `;
 
 export default Header;
