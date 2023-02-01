@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Nav from "./Nav";
+import Social from "./social/Social";
 import { Toggle } from "./toggle/Toggle";
 
 function Header() {
 	return (
 		<>
+			<Social />
 			<HeaderDiv>
 				<Link
 					style={{ textDecoration: "none" }}
@@ -27,7 +29,8 @@ const HeaderDiv = styled.div`
 	/* text-decoration: none; */
 	display: flex;
 	flex-direction: row;
-	padding: 20px;
+	padding: 0px;
+	margin: 0px;
 	justify-content: space-between;
 	margin: 20px;
 	font-size: 50px;
@@ -36,7 +39,7 @@ const HeaderDiv = styled.div`
 		display: flex;
 		flex-direction: column-reverse;
 		font-size: 3em;
-		padding: 10px;
+		padding: 0px;
 	}
 `;
 

@@ -1,0 +1,9 @@
+.social-container {
+    color: var(--pink);
+    margin: 8px 0 0 10px;
+}
+
+.github-logo {
+    height: 42px;
+    width: 42px;
+}
