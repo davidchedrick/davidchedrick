@@ -9,6 +9,9 @@ function ProjectArea() {
 	return (
 		<Container>
 			<Row>
+				<CatsGalore />
+			</Row>
+			<Row>
 				<BodhiSpot />
 			</Row>
 			<Row>
@@ -19,9 +22,6 @@ function ProjectArea() {
 			</Row>
 			<Row>
 				<CutieCats />
-			</Row>
-			<Row>
-				<CatsGalore />
 			</Row>
 		</Container>
 	);

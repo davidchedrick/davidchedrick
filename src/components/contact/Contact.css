@@ -42,8 +42,8 @@
         display: none;
         text-align: center;
 
-        &.visible {
+        /* &.visible {
             display: block;
-        }
-    }
+        }*/
+    } 
 
