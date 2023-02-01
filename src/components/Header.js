@@ -7,7 +7,10 @@ function Header() {
 	return (
 		<>
 			<HeaderDiv>
-				<Link to="/">
+				<Link
+					style={{ textDecoration: "none" }}
+					to="/"
+				>
 					<span className="title">David Chedrick.</span>
 				</Link>
 				<Toggle />
@@ -21,7 +24,7 @@ const HeaderDiv = styled.div`
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	text-align: center;
-	text-decoration: none;
+	/* text-decoration: none; */
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
