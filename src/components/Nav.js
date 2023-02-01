@@ -22,7 +22,6 @@ const NavStyles = styled.ul`
 	margin: 0;
 	padding: 0;
 	display: flex;
-	/* justify-self: end; */
 	font-size: 2rem;
 
 	a,
@@ -35,8 +34,9 @@ const NavStyles = styled.ul`
 		font-weight: 800;
 		font-size: 1.2em;
 		background: none;
-		border: 0 0;
+		border: 0;
 		text-decoration: none;
+		cursor: pointer;
 		color: var(--blue);
 		-webkit-text-stroke: 0.5px white;
 
@@ -75,7 +75,6 @@ const NavStyles = styled.ul`
 				width: calc(100% - 60px);
 			}
 			@media (max-width: 700px) {
-				width: calc(100% - 10px);
 			}
 		}
 	}
