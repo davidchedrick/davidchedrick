@@ -1,7 +1,9 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./project.css";
 function ProjectCard({ text, list, img, link, title }) {
 	const page = link !== "";
+	console.log("link: ", link);
 
 	return (
 		<Container className="m-4 d-flex">
@@ -31,13 +33,18 @@ function ProjectCard({ text, list, img, link, title }) {
 					</Col>
 
 					{page ? (
-						<button
+						<a
 							href={link}
-							size="lg"
-							className="card-button"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-							Enter Site
-						</button>
+							<button
+								size="lg"
+								className="card-button"
+							>
+								Enter Site
+							</button>
+						</a>
 					) : null}
 				</Row>
 			</Card>
