@@ -14,6 +14,7 @@ export default function Social() {
 				<img
 					alt="linkedIn"
 					src={linkedIn}
+					className="icon"
 				/>
 			</a>
 			<a
@@ -24,7 +25,7 @@ export default function Social() {
 				<img
 					alt="github"
 					src={github}
-					className="github-logo"
+					className="github-logo icon"
 				/>
 			</a>
 		</div>

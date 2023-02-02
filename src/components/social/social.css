@@ -4,6 +4,56 @@
 }
 
 .github-logo {
-    height: 42px;
-    width: 42px;
+    height: 43px;
+    width: 43px;
+    outline: 1px solid white;
+    border-radius: 90%;
 }
+
+.icon:hover {
+    box-shadow: 
+    -5px -5px 9px rgba(247, 3, 3, 0.75),
+      5px -5px 9px rgba(1, 111, 255, 0.75),
+      5px 5px 9px rgba(14, 204, 14, 0.75),
+      -5px 5px 9px rgba(251, 255, 3, 0.75);
+    border-radius: 90%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        box-shadow: 
+        -5px -5px 9px rgba(247, 3, 3, 0.75),
+          5px -5px 9px rgba(1, 111, 255, 0.75),
+          5px 5px 9px rgba(14, 204, 14, 0.75),
+          -5px 5px 9px rgba(251, 255, 3, 0.75);
+    }
+    25% {
+        box-shadow: 
+        -5px -5px 5px rgba(247, 3, 3, 0.75),
+          5px -5px 5px rgba(1, 111, 255, 0.75),
+          5px 5px 5px rgba(14, 204, 14, 0.75),
+          -5px 5px 5px rgba(251, 255, 3, 0.75);
+    }
+    50% {
+        box-shadow: 
+        -5px -5px 2px rgba(247, 3, 3, 0.75),
+          5px -5px 2px rgba(1, 111, 255, 0.75),
+          5px 5px 2px rgba(14, 204, 14, 0.75),
+          -5px 5px 2px rgba(251, 255, 3, 0.75);
+    }
+    75% {
+        box-shadow: 
+        -5px -5px 5px rgba(247, 3, 3, 0.75),
+          5px -5px 5px rgba(1, 111, 255, 0.75),
+          5px 5px 5px rgba(14, 204, 14, 0.75),
+          -5px 5px 5px rgba(251, 255, 3, 0.75);
+    }
+    100% {
+        box-shadow: 
+        -5px -5px 9px rgba(247, 3, 3, 0.75),
+          5px -5px 9px rgba(1, 111, 255, 0.75),
+          5px 5px 9px rgba(14, 204, 14, 0.75),
+          -5px 5px 9px rgba(251, 255, 3, 0.75);
+    }
+  }
