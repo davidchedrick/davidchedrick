@@ -1,5 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import "./project.css";
 function ProjectCard({ text, list, img, link, title }) {
 	const page = link !== "";
@@ -38,12 +38,7 @@ function ProjectCard({ text, list, img, link, title }) {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<button
-								size="lg"
-								className="card-button"
-							>
-								Enter Site
-							</button>
+							<button className="card-button">Enter Site</button>
 						</a>
 					) : null}
 				</Row>
