@@ -13,18 +13,17 @@ export default function About() {
 							<Card.Body>
 								<Card.Text>
 									{" "}
-									As a Full Stack Developer with a diverse
-									background in web development, business
-									management, retail, labor, and music
-									performance, I have a unique skill set that
-									allows me to approach projects from multiple
-									angles. My technical expertise includes
-									JavaScript, React, Ruby on Rails, Active
-									Record, HTML, and CSS. In addition, I have
-									strong skills in management, training,
-									coaching, and optimizing productivity. I am
-									dedicated to continuous growth, development,
-									and engagement.
+									Full Stack Developer with a unique skill set
+									in web development, business management,
+									retail, labor, and music performance.
+									Proficient in JavaScript, React, Ruby on
+									Rails, HTML, and CSS. Experienced with
+									business management, training, coaching, and
+									optimizing productivity. Gained hands-on
+									experience in designing and implementing web
+									applications throughout the entire
+									development life cycle, utilizing agile
+									methodologies and cross-functional teamwork.
 								</Card.Text>
 							</Card.Body>
 						</Col>
