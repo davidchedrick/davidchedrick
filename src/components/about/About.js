@@ -1,5 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import daivdHead from "./aboutImages/david-head.png";
+import daivdHead from "./aboutImages/pink-head.png";
 import "./About.css";
 
 export default function About() {
