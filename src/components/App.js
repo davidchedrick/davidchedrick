@@ -1,20 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import ProjectArea from "./project/ProjectArea";
-import { useState } from "react";
-import "../styles/App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import { keepTheme } from "./toggle/themes";
-import { useEffect } from "react";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import Games from "./games/Games";
 import ConnectGame from "./games/connect/ConnectGame";
+import MemoryGame from "./games/flip/MemoryGame";
+import "../styles/App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import { keepTheme } from "./toggle/themes";
+import NotFound from "../NotFound";
 
 function App() {
-	const [isActive, setIsActive] = useState(false);
-	console.log("isActive: ", isActive);
+	const [, setIsActive] = useState(false);
 
 	useEffect(() => {
 		keepTheme();
@@ -29,34 +28,29 @@ function App() {
 					path="/"
 					element={<ProjectArea />}
 				/>
-
-				<Route
-					path="/"
-					element={<ProjectArea />}
-				/>
 				<Route
 					path="/about"
 					element={<About />}
 				/>
-
 				<Route
 					path="/contact"
 					element={<Contact />}
 				/>
-
 				<Route
 					path="/games"
 					element={<Games />}
 				/>
-
 				<Route
 					path="/connect-game"
 					element={<ConnectGame />}
 				/>
-
+				<Route
+					path="/memory-game"
+					element={<MemoryGame />}
+				/>
 				<Route
 					path="*"
-					element={<h1>404 not found</h1>}
+					element={<NotFound />}
 				/>
 			</Routes>
 		</div>
