@@ -1,16 +1,15 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-
 import "./project.css";
+
 function ProjectCard({ text, list, img, link, title }) {
-	const page = link !== "";
-	console.log("link: ", link);
+	const isPageAvailable = link !== "";
 
 	return (
 		<Container className="m-4 d-flex">
 			<Card>
-				<Row className="m-0">
+				<Card.Title className="m-1">
 					<h1>{title}</h1>
-				</Row>
+				</Card.Title>
 				<Row>
 					<Col className="rounded float-start">
 						<Card.Body>
@@ -26,13 +25,13 @@ function ProjectCard({ text, list, img, link, title }) {
 					<Col className="rounded float-end">
 						<Row>
 							<Col>
-								<span>{text}</span>
+								<Card.Text>{text}</Card.Text>
 							</Col>
 							<Col>{list}</Col>
 						</Row>
 					</Col>
 
-					{page ? (
+					{isPageAvailable ? (
 						<a
 							href={link}
 							target="_blank"

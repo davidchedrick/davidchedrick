@@ -6,23 +6,19 @@ import CatsGalore from "../../pages/CatsGalore";
 import CutieCats from "../../pages/CutieCats";
 
 function ProjectArea() {
+	const projects = [
+		<CatsGalore />,
+		<BodhiSpot />,
+		<Blogging />,
+		<ChoreList />,
+		<CutieCats />,
+	];
+
 	return (
 		<Container>
-			<Row>
-				<CatsGalore />
-			</Row>
-			<Row>
-				<BodhiSpot />
-			</Row>
-			<Row>
-				<Blogging />
-			</Row>
-			<Row>
-				<ChoreList />
-			</Row>
-			<Row>
-				<CutieCats />
-			</Row>
+			{projects.map((project, index) => (
+				<Row key={index}>{project}</Row>
+			))}
 		</Container>
 	);
 }
