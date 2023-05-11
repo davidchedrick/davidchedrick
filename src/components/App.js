@@ -7,10 +7,10 @@ import Contact from "./contact/Contact";
 import Games from "./games/Games";
 import ConnectGame from "./games/connect/ConnectGame";
 import MemoryGame from "./games/flip/MemoryGame";
+import NotFound from "../NotFound";
 import "../styles/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { keepTheme } from "./toggle/themes";
-import NotFound from "../NotFound";
 
 function App() {
 	const [, setIsActive] = useState(false);
@@ -19,39 +19,28 @@ function App() {
 		keepTheme();
 	}, []);
 
+	const routes = [
+		{ path: "/", component: <ProjectArea /> },
+		{ path: "/about", component: <About /> },
+		{ path: "/contact", component: <Contact /> },
+		{ path: "/games", component: <Games /> },
+		{ path: "/connect-game", component: <ConnectGame /> },
+		{ path: "/memory-game", component: <MemoryGame /> },
+		{ path: "*", component: <NotFound /> },
+	];
+
 	return (
 		<div className="App">
 			<Header setIsActive={setIsActive} />
 
 			<Routes>
-				<Route
-					path="/"
-					element={<ProjectArea />}
-				/>
-				<Route
-					path="/about"
-					element={<About />}
-				/>
-				<Route
-					path="/contact"
-					element={<Contact />}
-				/>
-				<Route
-					path="/games"
-					element={<Games />}
-				/>
-				<Route
-					path="/connect-game"
-					element={<ConnectGame />}
-				/>
-				<Route
-					path="/memory-game"
-					element={<MemoryGame />}
-				/>
-				<Route
-					path="*"
-					element={<NotFound />}
-				/>
+				{routes.map(({ path, component }, index) => (
+					<Route
+						key={index}
+						path={path}
+						element={component}
+					/>
+				))}
 			</Routes>
 		</div>
 	);
