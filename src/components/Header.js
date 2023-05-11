@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Nav from "./Nav";
 import Social from "./social/Social";
@@ -38,7 +38,7 @@ const HeaderDiv = styled.div`
 	}
 `;
 
-const StyledLink = styled.RouterLink`
+const StyledLink = styled(Link)`
 	text-decoration: none;
 `;
 
