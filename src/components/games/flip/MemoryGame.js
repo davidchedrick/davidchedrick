@@ -1,62 +1,84 @@
 import { useEffect, useState } from "react";
-
+import Card from "./Card";
 import "./memoryGame.css";
-import Board from "./Board";
+import Timer from "./Timer";
 
 function MemoryGame() {
-	const [gameID, setGameID] = useState(0);
-	// const [selectedCards, setSelectedCards] = useState([]);
-	// const [showCards, setShowCards] = useState([]);
-	const [timeLeft, setTimeLeft] = useState(3);
+	const timerCount = 60;
+	const [cards, setCards] = useState([]);
+	const [selectedCards, setSelectedCards] = useState([]);
+	const [matchedCards, setMatchedCards] = useState([]);
+	const [seconds, setSeconds] = useState(timerCount);
+	const [isWinner, setIsWinner] = useState(false);
+	const [isTimeOver, setIsTimeOver] = useState(false);
 
-	// const cards = ["red", "orange", "yellow", "green", "blue", "purple"];
-	// const set = [...cards, ...cards];
+	const cardSet = ["red", "orange", "yellow", "green", "blue", "purple"];
+	const doubledCards = [...cardSet, ...cardSet];
 
-	// useEffect(() => {
-	// 	startGame();
-	// }, []);
+	useEffect(() => {
+		restartGame();
+	}, []);
 
-	// function startGame() {}
-
-	const restartGame = () => {
-		setGameID(prevID => prevID + 1);
+	const handleCardClick = index => {
+		if (selectedCards.length === 0) {
+			setSelectedCards([index]);
+		} else if (selectedCards.length === 1) {
+			setSelectedCards([...selectedCards, index]);
+			if (cards[index].color === cards[selectedCards[0]].color) {
+				setMatchedCards([...matchedCards, cards[index].color]);
+			}
+		} else {
+			setSelectedCards([index]);
+		}
 	};
 
-	// function handleCardClick(card, index) {
-	// 	const isNotClickable =
-	// 		selectedCards.includes(index) ||
-	// 		selectedCards.length >= 2 ||
-	// 		showCards.includes(index);
-
-	// 	if (isNotClickable) return;
-
-	// 	setSelectedCards([...selectedCards, index]);
-
-	// 	setShowCards(selectedCards);
-	// }
+	const restartGame = () => {
+		const shuffledCards = doubledCards
+			.map(card => ({ color: card, id: Math.random() }))
+			.sort(() => 0.5 - Math.random());
+		setCards(shuffledCards);
+		setSelectedCards([]);
+		setMatchedCards([]);
+		setIsTimeOver(false);
+		setSeconds(timerCount);
+	};
 
 	return (
 		<div className="memory-container">
-			<div className="stats-container">
-				<h2>Time Left: {timeLeft}</h2>
-			</div>
-
+			<Timer
+				seconds={seconds}
+				setSeconds={setSeconds}
+				setIsTimeOver={setIsTimeOver}
+				restartGame={restartGame}
+			/>
+			{isWinner === true && (
+				<h1>
+					<div className="heart">❤️</div>
+					You WIN!!!
+					<div className="heart">❤️</div>
+				</h1>
+			)}
+			{isTimeOver === true && (
+				<h1>
+					<div className="heart">💔</div>
+					Time over...
+					<div className="heart">💔</div>
+				</h1>
+			)}
 			<div className="card-container">
-				<Board key={gameID} />
-				<button onClick={restartGame}>Restart Game</button>
-
-				{/* {set.map((card, index) => {
-					return (
-						<Card
-							key={index}
-							card={card}
-							index={index}
-							handleCardClick={handleCardClick}
-							showCards={showCards}
-						/>
-					);
-				})} */}
+				{cards.map((card, index) => (
+					<Card
+						key={card.id}
+						color={card.color}
+						isFlipped={
+							selectedCards.includes(index) ||
+							matchedCards.includes(card.color)
+						}
+						handleClick={() => handleCardClick(index)}
+					/>
+				))}
 			</div>
+			<button onClick={restartGame}>Restart Game</button>
 		</div>
 	);
 }

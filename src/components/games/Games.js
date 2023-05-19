@@ -11,12 +11,12 @@ function Games() {
 			img: connectGif,
 			link: "/connect-game",
 		},
-		// {
-		//     title: "Memory Game",
-		//     text: "Flip the cards to find a match....",
-		//     img:
-		//     link: "/memory-game"
-		// },
+		{
+			title: "Memory Game",
+			text: "Flip the cards to find a match....",
+			img: "",
+			link: "/memory-game",
+		},
 	];
 
 	return (
@@ -35,7 +35,7 @@ function Games() {
 						<Card.Title>{game.title}</Card.Title>
 						<Card.Text>{game.text}</Card.Text>
 						<Link
-							to={game.title}
+							to={game.link}
 							className={game.text}
 						>
 							<button>PLAY</button>

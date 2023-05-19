@@ -114,60 +114,9 @@ html {
 .hidden {
   background: repeating-conic-gradient(
     var(--rainbow) 
-    90deg);
- 
-    animation: gradient 8s  infinite;
+    30deg);
 }
 
-@keyframes gradient {
-  0% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      90deg);
-	}
-  20% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      25deg);
-	}
-	30% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      50deg);
-	}
-	40% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      60deg);
-	}
-  50% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      90deg);
-	}
-  60% {
-    background: repeating-conic-gradient(
-      var(--rainbow) 
-      120deg);
-	}
-	70% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      180deg);
-	}
-	80% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      250deg);
-	}
-	90% {
-    background: repeating-conic-gradient(
-      var(--rainbow)
-      360deg);
-	}
-	100% {
-    background: repeating-conic-gradient(
-      var(--rainbow) 
-      30deg);
-	}
+.timer {
+  color: #fff;
 }
