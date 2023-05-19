@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Card from "./Card";
 import "./memoryGame.css";
 import Timer from "./Timer";
+
+const cardSet = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 function MemoryGame() {
 	const timerCount = 60;
@@ -12,12 +14,17 @@ function MemoryGame() {
 	const [isWinner, setIsWinner] = useState(false);
 	const [isTimeOver, setIsTimeOver] = useState(false);
 
-	const cardSet = ["red", "orange", "yellow", "green", "blue", "purple"];
-	const doubledCards = [...cardSet, ...cardSet];
+	const doubledCards = useMemo(() => [...cardSet, ...cardSet], [cardSet]);
 
 	useEffect(() => {
 		restartGame();
 	}, []);
+
+	useEffect(() => {
+		if (matchedCards.length === doubledCards.length) {
+			setIsWinner(true);
+		}
+	}, [matchedCards, doubledCards]);
 
 	const handleCardClick = index => {
 		if (selectedCards.length === 0) {
@@ -49,7 +56,6 @@ function MemoryGame() {
 				seconds={seconds}
 				setSeconds={setSeconds}
 				setIsTimeOver={setIsTimeOver}
-				restartGame={restartGame}
 			/>
 			{isWinner === true && (
 				<h1>

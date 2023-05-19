@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-const Timer = ({ setIsTimeOver, restartGame, seconds, setSeconds }) => {
+const Timer = ({ setIsTimeOver, seconds, setSeconds }) => {
 	useEffect(() => {
 		let interval;
 

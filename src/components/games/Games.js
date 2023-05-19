@@ -1,6 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import connectGif from "../../images/connectGame.gif";
+import underConstruction from "../../images/underConstruction.png";
 import "./Games.css";
 
 function Games() {
@@ -14,7 +15,7 @@ function Games() {
 		{
 			title: "Memory Game",
 			text: "Flip the cards to find a match....",
-			img: "",
+			img: underConstruction,
 			link: "/memory-game",
 		},
 	];
