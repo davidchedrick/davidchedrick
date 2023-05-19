@@ -4,14 +4,26 @@ import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
+	const [formState, setFormState] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+	const { name, email, message } = formState;
 	const [emailSent, setEmailSent] = useState(false);
 	const [loading, setLoading] = useState(false);
 
+	const handleChange = event => {
+		setFormState({
+			...formState,
+			[event.target.name]: event.target.value,
+		});
+	};
+
 	const isEmailValid = email => {
-		return email.includes("@");
+		const emailRegex =
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return emailRegex.test(email);
 	};
 
 	const submit = async () => {
@@ -39,9 +51,7 @@ const Contact = () => {
 			setLoading(true);
 			await emailjs.send(serviceId, templateId, templateParams, userId);
 			setEmailSent(true);
-			setName("");
-			setEmail("");
-			setMessage("");
+			setFormState({ name: "", email: "", message: "" });
 		} catch (error) {
 			alert("Something went wrong, please try again later.");
 		} finally {
@@ -52,21 +62,24 @@ const Contact = () => {
 	return (
 		<div id="contact-form">
 			<input
+				name="name"
 				type="text"
 				placeholder="Your Name"
 				value={name}
-				onChange={e => setName(e.target.value)}
+				onChange={handleChange}
 			/>
 			<input
+				name="email"
 				type="email"
 				placeholder="Your email address"
 				value={email}
-				onChange={e => setEmail(e.target.value)}
+				onChange={handleChange}
 			/>
 			<textarea
+				name="message"
 				placeholder="Your message"
 				value={message}
-				onChange={e => setMessage(e.target.value)}
+				onChange={handleChange}
 			></textarea>
 			<button
 				onClick={submit}
