@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import Card from "./Card";
 import "./memoryGame.css";
 import Timer from "./Timer";
@@ -14,11 +14,24 @@ function MemoryGame() {
 	const [isWinner, setIsWinner] = useState(false);
 	const [isTimeOver, setIsTimeOver] = useState(false);
 
-	const doubledCards = useMemo(() => [...cardSet, ...cardSet], [cardSet]);
+	const doubledCards = useMemo(() => [...cardSet, ...cardSet], []);
+
+	const restartGame = useCallback(() => {
+		const shuffledCards = doubledCards
+			.map(card => ({ color: card, id: Math.random() }))
+			.sort(() => 0.5 - Math.random());
+		setCards(shuffledCards);
+		setSelectedCards([]);
+		setMatchedCards([]);
+		setIsTimeOver(false);
+		setSeconds(timerCount);
+	}, [doubledCards, timerCount]);
+
+	const stableRestartGame = useCallback(restartGame, [restartGame]);
 
 	useEffect(() => {
-		restartGame();
-	}, []);
+		stableRestartGame();
+	}, [stableRestartGame]);
 
 	useEffect(() => {
 		if (matchedCards.length === doubledCards.length) {
@@ -37,17 +50,6 @@ function MemoryGame() {
 		} else {
 			setSelectedCards([index]);
 		}
-	};
-
-	const restartGame = () => {
-		const shuffledCards = doubledCards
-			.map(card => ({ color: card, id: Math.random() }))
-			.sort(() => 0.5 - Math.random());
-		setCards(shuffledCards);
-		setSelectedCards([]);
-		setMatchedCards([]);
-		setIsTimeOver(false);
-		setSeconds(timerCount);
 	};
 
 	return (

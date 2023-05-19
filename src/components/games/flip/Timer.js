@@ -13,13 +13,13 @@ const Timer = ({ setIsTimeOver, seconds, setSeconds }) => {
 		}
 
 		return () => clearInterval(interval);
-	}, [seconds]);
+	}, [seconds, setSeconds]);
 
 	useEffect(() => {
 		if (seconds === 0) {
 			setIsTimeOver(true);
 		}
-	}, [seconds]);
+	}, [seconds, setIsTimeOver]);
 
 	return <div className="timer">Time: {seconds} </div>;
 };
