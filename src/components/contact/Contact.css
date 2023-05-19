@@ -9,8 +9,55 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
+    box-shadow: 
+          -10px -10px 2px rgba(247, 3, 3, 0.75),
+          10px -10px 2px rgba(1, 111, 255, 0.75),
+          10px 10px 2px rgba(14, 204, 14, 0.75),
+          -10px 10px 2px rgba(251, 255, 3, 0.75);
 }
+
+#contact-form:hover {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      box-shadow: 
+        -10px -10px 2px rgba(247, 3, 3, 0.75),
+        10px -10px 2px rgba(1, 111, 255, 0.75),
+        10px 10px 2px rgba(14, 204, 14, 0.75),
+        -10px 10px 2px rgba(251, 255, 3, 0.75);
+      }
+      25% {
+        box-shadow: 
+        -10px -10px 2px rgba(251, 255, 3, 0.75),
+        10px -10px 2px rgba(247, 3, 3, 0.75),
+        10px 10px 2px rgba(1, 111, 255, 0.75),
+        -10px 10px 2px rgba(14, 204, 14, 0.75);
+      }
+      50% {
+        box-shadow: 
+        -10px -10px 2px rgba(14, 204, 14, 0.75),
+        10px -10px 2px rgba(251, 255, 3, 0.75),
+        10px 10px 2px rgba(247, 3, 3, 0.75),
+        -10px 10px 2px rgba(1, 111, 255, 0.75);
+      }
+      75% {
+        box-shadow: 
+        -10px -10px 2px rgba(1, 111, 255, 0.75),
+        10px -10px 2px rgba(14, 204, 14, 0.75),
+        10px 10px 2px rgba(251, 255, 3, 0.75),
+        -10px 10px 2px rgba(247, 3, 3, 0.75);
+      }
+      100% {
+        box-shadow: 
+        -10px -10px 2px rgba(247, 3, 3, 0.75),
+        10px -10px 2px rgba(1, 111, 255, 0.75),
+        10px 10px 2px rgba(14, 204, 14, 0.75),
+        -10px 10px 2px rgba(251, 255, 3, 0.75);
+      }
+    }
+
 #contact-form  input,
     textarea {
         width: 100%;
@@ -43,3 +90,4 @@
         text-align: center;
     } 
 
+  
