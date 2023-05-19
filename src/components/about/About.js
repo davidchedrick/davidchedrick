@@ -12,22 +12,37 @@ export default function About() {
 						<Col className="rounded float-start">
 							<Card.Body>
 								<Card.Text>
-									{" "}
-									Full Stack Developer with a unique skill set
-									in web development, business management,
-									retail, labor, and music performance.
-									Proficient in JavaScript, React, Ruby on
-									Rails, HTML, and CSS. Experienced with
-									business management, training, coaching, and
-									optimizing productivity. Gained hands-on
-									experience in designing and implementing web
-									applications throughout the entire
-									development life cycle, utilizing agile
-									methodologies and cross-functional teamwork.
+									Hello! I am David Chedrick, a Software
+									Engineer from Austin, TX, with hands-on
+									experience in full-stack web development. My
+									journey into software development was honed
+									at Flatiron School's intensive 60-week Full
+									Stack Software Engineering program. Here, I
+									developed, tested, and maintained a range of
+									projects, gaining an understanding of the
+									entire development life cycle.
+									<br />
+									<br />
+									My portfolio includes interactive web
+									applications, single-page sites, and social
+									apps, all showcasing my skills in front-end
+									and back-end development, as well as RESTful
+									design principles.
+									<br />
+									<br />
+									<h4>TECHNICAL SKILLS</h4> ●{" "}
+									<strong>Front-end:</strong> JavaScript,
+									React, Next.js, HTML, CSS, Jest, Apollo
+									Client
+									<br />● <strong>Back-end:</strong> Ruby,
+									Rails, PostgreSQL, MongoDB, Keystone.js,
+									GraphQL, SQLite, Active Record
+									<br />● <strong>Styling:</strong> Bootstrap,
+									Material-UI, Styled-Components
 								</Card.Text>
 							</Card.Body>
 						</Col>
-						<Col className="rounded float-end image-div">
+						<Col className="image-col">
 							<Card.Img
 								variant=""
 								src={daivdHead}

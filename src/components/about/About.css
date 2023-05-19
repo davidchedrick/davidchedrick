@@ -1,11 +1,13 @@
 .about-image {
-    border-radius: 90%;
-    width: 250px;
-    height: 250px;
-
-}
-
-.image-div {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .image-col {
     display: flex;
-   justify-content: center;
-}
+    align-items: center;
+    justify-content: center;
+  }
+  
