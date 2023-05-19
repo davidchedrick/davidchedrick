@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 
 import "./Contact.css";
@@ -8,29 +8,44 @@ const Contact = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [emailSent, setEmailSent] = useState(false);
+	const [loading, setLoading] = useState(false);
 
-	const submit = () => {
-		if (name && email && message) {
-			const serviceId = "service_4kpdu47";
-			const templateId = "template_s9sj5ci";
-			const userId = "5im5qLOpLEk_W9MAu";
-			const templateParams = {
-				name,
-				email,
-				message,
-			};
+	const isEmailValid = email => {
+		return email.includes("@");
+	};
 
-			emailjs
-				.send(serviceId, templateId, templateParams, userId)
-				.then(response => console.log(response))
-				.then(error => console.log(error));
+	const submit = async () => {
+		if (!name || !email || !message) {
+			alert("Please fill in all fields.");
+			return;
+		}
 
+		if (!isEmailValid(email)) {
+			alert("Please enter a valid email.");
+			return;
+		}
+
+		const serviceId = process.env.EMAILJS_SERVICE_ID;
+		const templateId = process.env.EMAILJS_TEMPLATE_ID;
+		const userId = process.env.EMAILJS_USER_ID;
+
+		const templateParams = {
+			name,
+			email,
+			message,
+		};
+
+		try {
+			setLoading(true);
+			await emailjs.send(serviceId, templateId, templateParams, userId);
+			setEmailSent(true);
 			setName("");
 			setEmail("");
 			setMessage("");
-			setEmailSent(true);
-		} else {
-			alert("Please fill in all fields.");
+		} catch (error) {
+			alert("Something went wrong, please try again later.");
+		} finally {
+			setLoading(false);
 		}
 	};
 
@@ -53,11 +68,14 @@ const Contact = () => {
 				value={message}
 				onChange={e => setMessage(e.target.value)}
 			></textarea>
-			<button onClick={submit}>Send Message</button>
+			<button
+				onClick={submit}
+				disabled={loading}
+			>
+				{loading ? "Sending..." : "Send Message"}
+			</button>
 
-			<span className={emailSent ? "visible" : null}>
-				Thank you for your message, we will be in touch in no time!
-			</span>
+			{emailSent && <span>Thank you for your message!!!</span>}
 		</div>
 	);
 };
