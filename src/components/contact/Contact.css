@@ -39,11 +39,7 @@
     }
 
     #contact-form  span {
-        display: none;
+        display: block;
         text-align: center;
-
-        /* &.visible {
-            display: block;
-        }*/
     } 
 
