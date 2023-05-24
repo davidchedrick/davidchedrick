@@ -4,8 +4,8 @@ import styled from "styled-components";
 export default function Nav() {
 	return (
 		<NavStyles>
-			<StyledLink to="about">About</StyledLink>
-			<StyledLink to="/">Projects</StyledLink>
+			<StyledLink to="/">About</StyledLink>
+			<StyledLink to="projects">Projects</StyledLink>
 			<StyledLink to="games">Games</StyledLink>
 			<StyledLink to="contact">Contact</StyledLink>
 			<button

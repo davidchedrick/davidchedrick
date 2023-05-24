@@ -1,8 +1,15 @@
+.about-container {
+  display: flex;
+}
+
+
+
 .about-image {
     border-radius: 50%;
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-width: 30em;
   }
   
   .image-col {
