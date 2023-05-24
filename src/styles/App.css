@@ -36,7 +36,7 @@ html {
     box-sizing: inherit;
 }
 html, #root {
-    background-color: var(--dark-background);
+background-color: var(--dark-background);
     color: var(--dark-text);
   }
 
