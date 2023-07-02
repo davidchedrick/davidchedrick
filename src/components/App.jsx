@@ -8,11 +8,12 @@ import Contact from "./contact/Contact";
 import Games from "./games/Games";
 import ConnectGame from "./games/connect/ConnectGame";
 import MemoryGame from "./games/flip/MemoryGame";
-import TruckGame from "./games/truck/TruckGame";
+import JumpGame from "./games/jump/JumpGame";
 import NotFound from "../NotFound";
 import "../styles/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { keepTheme } from "./toggle/themes";
+import CatNames from "./features/CatNames";
 
 function App() {
 	const [, setIsActive] = useState(false);
@@ -29,7 +30,8 @@ function App() {
 		{ path: "/games", component: <Games /> },
 		{ path: "/connect-game", component: <ConnectGame /> },
 		{ path: "/memory-game", component: <MemoryGame /> },
-		{ path: "/truck-game", component: <TruckGame /> },
+		{ path: "/jump-game", component: <JumpGame /> },
+		{ path: "/cat-names", component: <CatNames /> },
 		{ path: "*", component: <NotFound /> },
 	];
 

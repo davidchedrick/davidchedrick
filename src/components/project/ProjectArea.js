@@ -1,9 +1,9 @@
 import { Container, Row } from "react-bootstrap";
-import ChoreList from "../../pages/ChoreList";
-import Blogging from "../../pages/Blogging";
-import BodhiSpot from "../../pages/BodhiSpot";
-import CatsGalore from "../../pages/CatsGalore";
-import CutieCats from "../../pages/CutieCats";
+import ChoreList from "./projects/ChoreList";
+import Blogging from "./projects/Blogging";
+import BodhiSpot from "./projects/BodhiSpot";
+import CatsGalore from "./projects/CatsGalore";
+import CutieCats from "./projects/CutieCats";
 
 function ProjectArea() {
 	const projects = [

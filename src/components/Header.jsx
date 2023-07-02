@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Nav from "./Nav";
 import Social from "./social/Social";
 import { Toggle } from "./toggle/Toggle";
+import "../styles/Header.css";
 
 function Header() {
 	return (

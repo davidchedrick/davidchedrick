@@ -1,5 +1,5 @@
 import GameCanvas from "./GameCanvas";
 
-export default function TruckGame() {
+export default function JumpGame() {
 	return <GameCanvas />;
 }

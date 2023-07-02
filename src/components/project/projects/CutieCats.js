@@ -1,13 +1,13 @@
-import ProjectCard from "../components/project/ProjectCard";
-import bodhiSpotImg from "../images/bodhiSpot.gif";
+import cutieCatImg from "../../../images/BodiCatAnimation.gif";
+import ProjectCard from "../ProjectCard";
 
-function BodhiSpot() {
-	const img = bodhiSpotImg;
+function CutieCats() {
+	const img = cutieCatImg;
 	const text =
-		"BodhiSpot is a web application built on the client side with React. It is styled with Bootstrap and React-Bootstrap. The server side is Ruby on Rails with Active Record. With PostgreSQL as the database.";
+		"BodhiCat's Cutie Cats is a React single page application. Using client-side routing, with React-Router. The application has full CRUD capabilities. Front-end is hosted on Netlify and with the Back-end hosted on Heroku.";
 	const link = "";
 	// const link = "https://cutiecats.netlify.app/"
-	const title = "BodhiSpot";
+	const title = "BodhiCat's Cutie Cats";
 	const list = (
 		<div>
 			<ul>
@@ -15,10 +15,9 @@ function BodhiSpot() {
 				<li>React</li>
 				<li>CSS</li>
 				<li>Bootstrap</li>
+				<li>Styled-Components</li>
 				<li>React-Router</li>
-				<li>Ruby</li>
-				<li>Active Record</li>
-				<li>PostgreSQL</li>
+				<li>uuid</li>
 			</ul>
 			<ul className="git-links">
 				<li>
@@ -41,4 +40,4 @@ function BodhiSpot() {
 	);
 }
 
-export default BodhiSpot;
+export default CutieCats;

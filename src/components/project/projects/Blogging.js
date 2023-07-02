@@ -1,5 +1,5 @@
-import ProjectCard from "../components/project/ProjectCard";
-import bodhiBloggingImg from "../images/bodhiBlogging.gif";
+import ProjectCard from "../ProjectCard";
+import bodhiBloggingImg from "../../../images/bodhiBlogging.gif";
 
 function Blogging() {
 	const img = bodhiBloggingImg;

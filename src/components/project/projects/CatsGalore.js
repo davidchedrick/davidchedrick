@@ -1,6 +1,5 @@
-import catsGaloreImg from "../images/CutieCatAnimation.gif";
-
-import ProjectCard from "../components/project/ProjectCard";
+import catsGaloreImg from "../../../images/CutieCatAnimation.gif";
+import ProjectCard from "../ProjectCard";
 
 function CatsGalore() {
 	const img = catsGaloreImg;
