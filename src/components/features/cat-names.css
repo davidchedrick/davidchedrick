@@ -20,3 +20,31 @@ input {
   padding: 10px;
   margin: 10px;
 }
+
+
+.add-name {
+  background-color: #1f22e2;
+  color: white;
+  border: 5px solid #1fe297;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  font-size: 28px;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-names {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  list-style: none;
+  width: ;
+}
+
+
+.cat-names :nth-last-child(1) {
+  margin-left: 0.5em;
+}
