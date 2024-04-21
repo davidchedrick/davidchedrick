@@ -1,92 +1,103 @@
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Card from "./Card";
 import "./memoryGame.css";
 import Timer from "./Timer";
+import { useMemo } from "react";
 
-const cardSet = ["red", "orange", "yellow", "green", "blue", "purple"];
+const CARD_COLORS = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 function MemoryGame() {
-	const timerCount = 60;
-	const [cards, setCards] = useState([]);
-	const [selectedCards, setSelectedCards] = useState([]);
-	const [matchedCards, setMatchedCards] = useState([]);
-	const [seconds, setSeconds] = useState(timerCount);
-	const [isWinner, setIsWinner] = useState(false);
-	const [isTimeOver, setIsTimeOver] = useState(false);
+	const [gameStarted, setGameStarted] = useState(false);
+	const [gameWon, setGameWon] = useState(false);
+	const [gameOver, setGameOver] = useState(false);
+	const [timerSeconds, setTimerSeconds] = useState(60);
+	const [shuffledCards, setShuffledCards] = useState([]);
+	const [selectedCardIndexes, setSelectedCardIndexes] = useState([]);
 
-	const doubledCards = useMemo(() => [...cardSet, ...cardSet], []);
+	const doubledCards = useMemo(
+		() => [...CARD_COLORS, ...CARD_COLORS],
+		[CARD_COLORS]
+	);
 
 	const restartGame = useCallback(() => {
-		const shuffledCards = doubledCards
-			.map(card => ({ color: card, id: Math.random() }))
+		const shuffledWithIds = doubledCards
+			.map(color => ({ color, id: Math.random() }))
 			.sort(() => 0.5 - Math.random());
-		setCards(shuffledCards);
-		setSelectedCards([]);
-		setMatchedCards([]);
-		setIsTimeOver(false);
-		setSeconds(timerCount);
-	}, [doubledCards, timerCount]);
-
-	const stableRestartGame = useCallback(restartGame, [restartGame]);
+		setShuffledCards(shuffledWithIds);
+		setSelectedCardIndexes([]);
+		setGameWon(false);
+		setGameOver(false);
+		setTimerSeconds(60);
+	}, [doubledCards]);
 
 	useEffect(() => {
-		stableRestartGame();
-	}, [stableRestartGame]);
+		if (!gameStarted) return;
+		restartGame();
+	}, [gameStarted, restartGame]);
 
-	useEffect(() => {
-		if (matchedCards.length === doubledCards.length) {
-			setIsWinner(true);
-		}
-	}, [matchedCards, doubledCards]);
+	const handleCardClick = cardIndex => {
+		if (gameOver || gameWon) return;
 
-	const handleCardClick = index => {
-		if (selectedCards.length === 0) {
-			setSelectedCards([index]);
-		} else if (selectedCards.length === 1) {
-			setSelectedCards([...selectedCards, index]);
-			if (cards[index].color === cards[selectedCards[0]].color) {
-				setMatchedCards([...matchedCards, cards[index].color]);
+		const newSelectedIndexes = [...selectedCardIndexes];
+		if (newSelectedIndexes.length === 0) {
+			newSelectedIndexes.push(cardIndex);
+		} else if (newSelectedIndexes.length === 1) {
+			newSelectedIndexes.push(cardIndex);
+			const firstCardColor = shuffledCards[newSelectedIndexes[0]].color;
+			if (firstCardColor === shuffledCards[cardIndex].color) {
+				setGameWon(
+					shuffledCards.length === selectedCardIndexes.length + 1
+				); // Check for win
+			} else {
+				setTimeout(() => setSelectedCardIndexes([]), 1000); // Briefly reveal both cards
 			}
 		} else {
-			setSelectedCards([index]);
+			// Only allow selecting one card at a time
+			newSelectedIndexes.length = 0;
+			newSelectedIndexes.push(cardIndex);
 		}
+		setSelectedCardIndexes(newSelectedIndexes);
 	};
 
 	return (
 		<div className="memory-container">
 			<Timer
-				seconds={seconds}
-				setSeconds={setSeconds}
-				setIsTimeOver={setIsTimeOver}
+				seconds={timerSeconds}
+				setSeconds={setTimerSeconds}
+				setGameOver={setGameOver}
 			/>
-			{isWinner === true && (
+			{gameWon && (
 				<h1>
 					<div className="heart">❤️</div>
 					You WIN!!!
 					<div className="heart">❤️</div>
 				</h1>
 			)}
-			{isTimeOver === true && (
+			{gameOver && (
 				<h1>
-					<div className="heart">💔</div>
+					<div className="heart"></div>
 					Time over...
-					<div className="heart">💔</div>
+					<div className="heart"></div>
 				</h1>
 			)}
 			<div className="card-container">
-				{cards.map((card, index) => (
+				{shuffledCards.map((card, index) => (
 					<Card
 						key={card.id}
 						color={card.color}
 						isFlipped={
-							selectedCards.includes(index) ||
-							matchedCards.includes(card.color)
+							selectedCardIndexes.includes(index) || gameWon
 						}
 						handleClick={() => handleCardClick(index)}
 					/>
 				))}
 			</div>
-			<button onClick={restartGame}>Restart Game</button>
+			<button
+				onClick={() => setGameStarted(true)}
+				disabled={gameStarted}
+			>
+				{gameStarted ? "Restart Game" : "Start Game"}
+			</button>
 		</div>
 	);
 }

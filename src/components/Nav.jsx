@@ -5,9 +5,9 @@ export default function Nav() {
 	return (
 		<NavStyles>
 			<StyledLink to="/">About</StyledLink>
-			<StyledLink to="projects">Projects</StyledLink>
+			{/* <StyledLink to="projects">Projects</StyledLink> */}
 			<StyledLink to="games">Games</StyledLink>
-			<StyledLink to="contact">Contact</StyledLink>
+			{/* <StyledLink to="contact">Contact</StyledLink> */}
 			<button
 				className="invisable-button"
 				disabled

@@ -1,4 +1,7 @@
-html {
+
+
+
+ html {
   --rainbow:  rgb(255, 0, 0), 
   rgb(238, 255, 0), 
   rgb(0, 255, 85), 
@@ -119,4 +122,7 @@ html {
 
 .timer {
   color: #fff;
-}
+} 
+
+
+
