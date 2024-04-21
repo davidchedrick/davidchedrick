@@ -14,10 +14,7 @@ function MemoryGame() {
 	const [shuffledCards, setShuffledCards] = useState([]);
 	const [selectedCardIndexes, setSelectedCardIndexes] = useState([]);
 
-	const doubledCards = useMemo(
-		() => [...CARD_COLORS, ...CARD_COLORS],
-		[CARD_COLORS]
-	);
+	const doubledCards = useMemo(() => [...CARD_COLORS, ...CARD_COLORS], []);
 
 	const restartGame = useCallback(() => {
 		const shuffledWithIds = doubledCards
